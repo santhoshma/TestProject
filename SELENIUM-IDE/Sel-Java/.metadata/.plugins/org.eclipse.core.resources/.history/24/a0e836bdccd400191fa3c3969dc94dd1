@@ -1,0 +1,42 @@
+import java.io.*;
+import java.lang.*;
+public abstract class BankAtm
+{
+	public void miniStatement(){
+		System.out.println(" Mini Statement ");
+	}
+	public void withDraw(){
+		System.out.println(" With Drawing Cash ");
+	}
+	public void deposit(){
+		System.out.println(" Cash Deposit ");
+	}
+	public abstract void pinChange();
+	public abstract void balEnq();
+}
+	abstract class  BankAtmImpl extends BankAtm{
+	public void pinChange(){
+		System.out.println(" BankAtmImpl : pinChange() ");
+	}
+	}
+	class BankAtmImplOne extends BankAtmImpl {
+	public void balEnq(){
+		System.out.println(" BankAtmImpOne : balEnq() ");
+	}
+	public void display(){
+		System.out.println(" Display() .....");
+	}
+	}
+	public class BankTest {
+	   public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		//BankAtm b=new BankAtm();
+		   BankAtmImplOne one=new BankAtmImplOne();
+		   one.miniStatement();
+		   one.balEnq();
+		   one.deposit();
+		   one.display();
+	}
+  }
+	
+

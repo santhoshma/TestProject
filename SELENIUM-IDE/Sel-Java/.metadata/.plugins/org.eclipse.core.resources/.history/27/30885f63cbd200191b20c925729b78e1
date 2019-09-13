@@ -1,0 +1,15 @@
+package SelDemo.maventestone;
+public class Test {
+	public void open() {
+		// TODO Auto-generated method stub
+		System.out.println(" Open into the application :");
+	}
+	public void login() {
+		// TODO Auto-generated method stub
+		WebDriver driver=new FirefoxDriver();
+		
+	}
+public static void main(String[] args) {
+		// TODO Auto-generated method stub
+	}
+}
